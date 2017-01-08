@@ -1,13 +1,15 @@
 
 glob = require 'glob'
+path = require 'path'
 
 module.exports = (dir, mapper) ->
 
 	container = {}
 	skips = dir.split(/[\\\/]+/).length
-	files = glob.sync "#{dir}/**/*.{js,json,coffee}", {}
+	files = glob.sync "#{dir}/**/*.{js,json,coffee}"
 
 	for file in files
+		console.log file
 		lastObject = container
 		file = file.substring 0, file.lastIndexOf('.')
 		tokens = file.split /[\\\/]+/
