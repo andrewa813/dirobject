@@ -1,4 +1,7 @@
 /node_modules
 /src
 /bin
+/test
+.editorconfig
+gulpfile.js
 coffeelint.json
