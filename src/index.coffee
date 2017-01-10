@@ -9,7 +9,6 @@ module.exports = (dir, mapper) ->
 	files = glob.sync "#{dir}/**/*.{js,json,coffee}"
 
 	for file in files
-		console.log file
 		lastObject = container
 		file = file.substring 0, file.lastIndexOf('.')
 		tokens = file.split /[\\\/]+/
